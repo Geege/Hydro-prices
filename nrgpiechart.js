@@ -5,7 +5,7 @@ var labelType, useGradients, nativeTextSupport, animate;
       iStuff = ua.match(/iPhone/i) || ua.match(/iPad/i),
       typeOfCanvas = typeof HTMLCanvasElement,
       nativeCanvasSupport = (typeOfCanvas == 'object' || typeOfCanvas == 'function'),
-      textSupport = nativeCanvasSupport 
+      textSupport = nativeCanvasSupport
         && (typeof document.createElement('canvas').getContext('2d').fillText == 'function');
   //I'm setting this based on the fact that ExCanvas provides text support for IE
   //and that as of today iPhone/iPad current text support is lame
@@ -18,7 +18,7 @@ var labelType, useGradients, nativeTextSupport, animate;
 var Log = {
   elem: false,
   write: function(text){
-    if (!this.elem) 
+    if (!this.elem)
       this.elem = document.getElementById('log');
     this.elem.innerHTML = text;
     this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
@@ -34,52 +34,52 @@ function init(){
       {
         'label': 'Montreal',
         'values': [6.87, 9.05, 7.38, 4.62]
-      }, 
+      },
       {
         'label': 'Calgary',
         'values': [14.81,16.93,15.27,14.02]
-      }, 
+      },
       {
         'label': 'Charlottetown',
         'values': [14.87,15.54,12.87,8.53]
-      }, 
+      },
       {
         'label': 'Edmonton',
         'values': [13.9,13.25,17.92,13.13]
-      }, 
+      },
        {
         'label': 'Halifax',
         'values': [15.45,14.85,12.44,9.33]
-      }, 
+      },
        {
         'label': 'Moncton',
         'values': [11.82,12.46,10.98,6.86]
-      }, 
+      },
        {
         'label': 'Ottawa',
         'values': [12.39,12.26,10.59,6.2]
-      }, 
+      },
        {
         'label': 'Regina',
         'values': [13.15,10.82,9.53,5.95]
-      }, 
+      },
        {
         'label': "St John's",
         'values': [12.55,12.58,9.82,3.98]
-      }, 
+      },
        {
         'label': 'Toronto',
         'values': [12.48,12.4,11.85,10.81]
-      }, 
+      },
       {
         'label': 'Vancouver',
         'values': [8.91,9.6,7.23,5.06]
-      }, 
+      },
       {
         'label': 'Winnipeg',
         'values': [7.63,7.48,5.76,3.78]
       }]
-      
+
   };
 
   function sum(values){
@@ -95,7 +95,7 @@ function init(){
     return suma - sumb;
   });
   */
-  
+
   function sortData(data, sorter) {
     data.sort(function(a, b) {
       var suma= sum(a.values);
@@ -110,7 +110,7 @@ function init(){
   sortData(json.values, ascendingSort);
 
   console.log(json.values);
-      
+
     //end
     var json2 = {
         'label': ['Résidentiel (1000kWh)', 'Petite puissance (10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
@@ -118,52 +118,52 @@ function init(){
         {
         'label': 'Montreal',
         'values': [7.89,10.41,8.49,5.31,]
-      }, 
+      },
       {
         'label': 'Calgary',
         'values': [15.55,17.77,16.03,14.72,2]
-      }, 
+      },
       {
         'label': 'Charlottetown',
         'values': [16.95,17.71,14.68,9.72,2]
-      }, 
+      },
       {
         'label': 'Edmonton',
         'values': [14.6,13.91,18.82,13.87,2]
-      }, 
+      },
        {
         'label': 'Halifax',
         'values': [16.22,17.08,14.3,10.73,2]
-      }, 
+      },
        {
         'label': 'Moncton',
         'values': [13.36,14.08,12.4,7.75,2]
-      }, 
+      },
        {
         'label': 'Ottawa',
         'values': [14,13.86,11.97,7,2]
-      }, 
+      },
        {
         'label': 'Regina',
         'values': [15.12,13.03,11.48,7.17,2]
-      }, 
+      },
        {
         'label': 'St Johns',
         'values': [13.17,14.22,11.1,4.5,2]
-      }, 
+      },
        {
         'label': 'Toronto',
         'values': [14.3,14.21,13.39,12.21,2]
-      }, 
+      },
       {
         'label': 'Vancouver',
         'values': [9.55,10.76,8.09,5.66,2]
-      }, 
+      },
       {
         'label': 'Winnipeg',
         'values': [8.73,8.75,6.74,4.02,2]
       }]
-        
+
     };
     //init PieChart
     var pieChart = new $jit.PieChart({
@@ -211,7 +211,7 @@ function init(){
         util.addClass(button, 'white');
         button.innerHTML="Prix avec taxes";
         pieChart.updateJSON(json);}
-      else{ 
+      else{
       util.removeClass(button, 'white');
       util.addClass(button, 'gray');
       button.innerHTML="Prix sans taxes";
