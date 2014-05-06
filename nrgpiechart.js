@@ -202,19 +202,25 @@ function init(){
     pieChart.loadJSON(json);
     //end
     var list = $jit.id('id-list'),
-        button = $jit.id('update');
+        button = $jit.id('update'),
+        titleWithTax = $jit.id('center-title-wtax'),
+        titleWithoutTax = $jit.id('center-title-ntax');
     //update json on click
     $jit.util.addEvent(button, 'click', function() {
       var util = $jit.util;
       if(util.hasClass(button, 'gray')){
         util.removeClass(button, 'gray');
         util.addClass(button, 'white');
-        button.innerHTML="Prix avec taxes";
+        button.innerHTML = "Prix avec taxes";
+        util.removeClass(titleWithoutTax, 'hidden');
+        util.addClass(titleWithTax, 'hidden');
         pieChart.updateJSON(json);}
       else{
       util.removeClass(button, 'white');
       util.addClass(button, 'gray');
-      button.innerHTML="Prix sans taxes";
+      button.innerHTML = "Prix sans taxes";
+      util.removeClass(titleWithTax, 'hidden');
+      util.addClass(titleWithoutTax, 'hidden');
       pieChart.updateJSON(json2);}
     });
     //dynamically add legend to list

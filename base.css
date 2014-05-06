@@ -57,7 +57,6 @@ a {
     background-image:url('col2.png');
     background-position:center right;
     border-left:1px solid #ddd;
-    
 }
 
 #right-container {
@@ -103,6 +102,14 @@ a {
     height:600px;
     margin:auto;
     overflow:hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.chart-title {
+    height:40px;
 }
 
 /*TOOLTIPS*/
