@@ -29,7 +29,8 @@ var Log = {
 function init(){
     //init data
     var json = {
-      'label': ['Résidentiel (1000kWh)', 'Petite puissance (10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
+      color: ["#0F4B80", "#ffffff", "#1E97FF", "#355D80"],
+      'label': ['Résidentiel (1000kWh)', 'Petite puissance <br/>(10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
       'values': [
       {
         'label': 'Montreal',
@@ -109,9 +110,6 @@ function init(){
 
   sortData(json.values, ascendingSort);
 
-  console.log(json.values);
-
-    //end
     var json2 = {
         'label': ['Résidentiel (1000kWh)', 'Petite puissance (10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
         'values': [
@@ -174,7 +172,7 @@ function init(){
       //offsets
       offset: 30,
       sliceOffset: 0,
-      labelOffset: 20,
+      labelOffset: 40,
       //slice style
       type: useGradients? 'stacked:gradient' : 'stacked',
       //whether to show the labels for the slices
@@ -188,7 +186,7 @@ function init(){
         type: labelType, //Native or HTML
         size: 20,
         family: 'Arial',
-        color: 'white'
+        color: 'black'
       },
       //enable tips
       Tips: {
@@ -211,7 +209,7 @@ function init(){
       if(util.hasClass(button, 'gray')){
         util.removeClass(button, 'gray');
         util.addClass(button, 'white');
-        button.innerHTML = "Prix avec taxes";
+        button.innerHTML = "Prix taxes incluses";
         util.removeClass(titleWithoutTax, 'hidden');
         util.addClass(titleWithTax, 'hidden');
         pieChart.updateJSON(json);}

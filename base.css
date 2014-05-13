@@ -1,7 +1,7 @@
 html, body {
     margin:0;
     padding:0;
-    font-family: "Lucida Grande", Verdana;
+    font-family: 'Oswald', sans-serif;
     font-size: 0.9em;
     text-align: center;
     background-color:#F2F2F2;
@@ -73,8 +73,8 @@ a {
 #center-container {
     width:600px;
     left:200px;
-    background-color:#1a1a1a;
-    color:#ccc;
+    background-color: #e0effb;
+    color: #1b1b17;
 }
 
 .text {
@@ -110,6 +110,10 @@ a {
 
 .chart-title {
     height:40px;
+}
+
+#infovis-canvas {
+    background-color: ##e0effb;
 }
 
 /*TOOLTIPS*/
