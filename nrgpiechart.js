@@ -29,7 +29,7 @@ function init(){
     //init data
     var json = {
       color: ["#FF7100", "#ffffff", "#1E97FF", "#355D80"],
-      'label': ['Résidentiel </br></br> Commercial', 'Petite puissance', 'Moyenne puissance', 'Grande puissance'],
+      'label': ['Résidentiel', 'Commercial petite puissance', 'Commercial moyenne puissance', 'Commercial grande puissance'],
       'values': [
       {
         'label': 'Montréal',
