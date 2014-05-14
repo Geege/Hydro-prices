@@ -1,4 +1,4 @@
-var labelType, useGradients, nativeTextSupport, animate;
+var labelType, nativeTextSupport, animate;
 
 (function() {
   var ua = navigator.userAgent,
@@ -11,7 +11,6 @@ var labelType, useGradients, nativeTextSupport, animate;
   //and that as of today iPhone/iPad current text support is lame
   labelType = (!nativeCanvasSupport || (textSupport && !iStuff))? 'Native' : 'HTML';
   nativeTextSupport = labelType == 'Native';
-  useGradients = nativeCanvasSupport;
   animate = !(iStuff || !nativeCanvasSupport);
 })();
 
@@ -65,7 +64,7 @@ function init(){
         'values': [13.15,10.82,9.53,5.95]
       },
        {
-        'label': "Saint-Jean (T-N)",
+        'label': "Saint-Jean (T'N)",
         'values': [12.55,12.58,9.82,3.98]
       },
        {
@@ -173,7 +172,7 @@ function init(){
       sliceOffset: 0,
       labelOffset: 40,
       //slice style
-      type: useGradients? 'stacked:gradient' : 'stacked',
+      type: 'stacked',
       //whether to show the labels for the slices
       showLabels:true,
       //resize labels according to
