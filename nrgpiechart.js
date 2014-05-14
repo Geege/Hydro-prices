@@ -29,8 +29,8 @@ var Log = {
 function init(){
     //init data
     var json = {
-      color: ["#0F4B80", "#ffffff", "#1E97FF", "#355D80"],
-      'label': ['Résidentiel (1000kWh)', 'Petite puissance <br/>(10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
+      color: ["#FF7100", "#ffffff", "#1E97FF", "#355D80"],
+      'label': ['Résidentiel </br></br> Commercial', 'Petite puissance', 'Moyenne puissance', 'Grande puissance'],
       'values': [
       {
         'label': 'Montreal',
@@ -111,7 +111,6 @@ function init(){
   sortData(json.values, ascendingSort);
 
     var json2 = {
-        'label': ['Résidentiel (1000kWh)', 'Petite puissance (10 000kWh)', 'Moyenne puissance (400 000kWh)', 'Grande puissance 30 600 000kWh)'],
         'values': [
         {
         'label': 'Montreal',
@@ -192,7 +191,7 @@ function init(){
       Tips: {
         enable: true,
         onShow: function(tip, elem) {
-           tip.innerHTML = "<b>" + elem.name + "</b>: " + elem.value;
+           tip.innerHTML = "<b>" + elem.name + "</b>: " + elem.value + "¢";
         }
       }
     });
