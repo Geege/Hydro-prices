@@ -33,7 +33,7 @@ function init(){
       'label': ['Résidentiel </br></br> Commercial', 'Petite puissance', 'Moyenne puissance', 'Grande puissance'],
       'values': [
       {
-        'label': 'Montreal',
+        'label': 'Montréal',
         'values': [6.87, 9.05, 7.38, 4.62]
       },
       {
@@ -65,7 +65,7 @@ function init(){
         'values': [13.15,10.82,9.53,5.95]
       },
        {
-        'label': "St John's",
+        'label': "Saint-Jean (T-N)",
         'values': [12.55,12.58,9.82,3.98]
       },
        {
@@ -113,7 +113,7 @@ function init(){
     var json2 = {
         'values': [
         {
-        'label': 'Montreal',
+        'label': 'Montréal',
         'values': [7.89,10.41,8.49,5.31,]
       },
       {
